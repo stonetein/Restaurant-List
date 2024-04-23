@@ -44,8 +44,8 @@ Terminal log `express server is running on http://localhost:3000` ，Lunch web b
 
 ## Tools
 
-- [Visual Studio Code](https://visualstudio.microsoft.com/zh-hant/) - 開發環境
-- [Express](https://www.npmjs.com/package/express) - 應用程式架構
-- [Express-Fileupload](https://www.npmjs.com/package/express-fileupload) - 上傳圖片並放置指定目錄
-- [Express-Handlebars](https://www.npmjs.com/package/express-handlebars) - 模板引擎
+- [Visual Studio Code](https://visualstudio.microsoft.com/zh-hant/) 
+- [Node.js](https://nodejs.org/en)
+- [Express](https://www.npmjs.com/package/express) 
+- [Handlebars](https://www.npmjs.com/package/express-handlebars) 
 
