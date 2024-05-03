@@ -21,18 +21,15 @@ app.get('/', (req, res) => {
 })
 
 app.get('/restaurants', (req, res) => {
-  const keyword = req.query.search?.trim()
-  console.log('keyword',keyword)
+  const keyword = req.query.search?.trim();
   const matchedRes = keyword ? restaurants.filter((rt) =>
-    Object.values(rt).some((property) => {
-      if (typeof property === 'string') {
-        return property.toLowerCase().includes(keyword.toLowerCase())
-      }
-      return false
-    })
-  ) : restaurants
-  res.render('index', { restaurants: matchedRes, keyword })
+    (typeof rt.name === 'string' && rt.name.toLowerCase().includes(keyword.toLowerCase())) ||
+    (typeof rt.category === 'string' && rt.category.toLowerCase().includes(keyword.toLowerCase()))
+  ) : restaurants;
+  res.render('index', { restaurants: matchedRes, keyword });
 })
+
+
 
 app.get('/restaurant/:id', (req, res) => {
   const id = req.params.id
